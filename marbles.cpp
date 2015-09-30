@@ -36,15 +36,14 @@ int main(int argc, const char * argv[]) {
         {
             sum1 *= i;
         }
-            for(unsigned long long int j = (marbles - 1 - colors); j > 0; j--)
+            for(unsigned long long int j = (marbles - colors); j > 0; j--)
             {
                 sum2 *= j;
             }
-                for (unsigned long long int k = colors; k > 0; k--)
+                for (unsigned long long int k = colors - 1; k > 0; k--)
                 {
                     sum3 *=k;
                 }
-        sum3 = sum2 * sum3;
         std::cout << "There are " << sum1/sum3 << " ways to select that\n";
     }
     
